@@ -2,8 +2,6 @@ package com.github.sunmilksong;
 
 import com.github.sunmilksong.proxy.CommonProxy;
 import com.github.sunmilksong.util.Reference;
-
-
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -13,7 +11,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 /**
  * @author SUNMILKSONG
  */
-@SuppressWarnings("ALL")
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
 public class Main {
 

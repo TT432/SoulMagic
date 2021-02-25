@@ -17,4 +17,5 @@ public class ToolCom {
         item.setRegistryName(Objects.requireNonNull(item.getBlock().getRegistryName()));
         return item;
     }
+
 }

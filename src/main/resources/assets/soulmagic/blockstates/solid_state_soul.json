@@ -1,5 +1,7 @@
 {
   "variants": {
-    "normal": { "model": "soulmagic:solid_state_soul" }
+    "normal": {
+      "model": "soulmagic:solid_state_soul"
+    }
   }
 }
