@@ -19,7 +19,7 @@ import java.util.Random;
  */
 
 @ParametersAreNonnullByDefault
-public class BlockFarm extends BlockSk {
+public class BlockFarm extends BlockBase {
 
     public BlockFarm(String name, Material material, SoundType sound) {
         super(name, material, sound);
@@ -29,7 +29,7 @@ public class BlockFarm extends BlockSk {
         ModBlocks.BLOCKS.add(this);
     }
 
-    protected static void turnToSand(World worldIn, BlockPos pos) {
+    public static void turnToSand(World worldIn, BlockPos pos) {
         worldIn.setBlockState(pos, Blocks.SAND.getDefaultState());
     }
 
@@ -41,7 +41,7 @@ public class BlockFarm extends BlockSk {
     }
 
 
-    private boolean hasLiquidOrBlock(World worldIn, BlockPos pos) {
+    public boolean hasLiquidOrBlock(World worldIn, BlockPos pos) {
 
         boolean hasWater = false;
         boolean hasLava = false;

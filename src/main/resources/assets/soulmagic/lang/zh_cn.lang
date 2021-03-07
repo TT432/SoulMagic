@@ -10,6 +10,10 @@ tile.soulmagic.solid_state_soul.name=凝固灵魂块
 
 tile.soulmagic.soul_ore.name=灵魂结晶矿
 
+tile.soulmagic.soul_sand.name=灵魂尘土
+
 #作物
 
 tile.soulmagic.soul.crop.name=灵魂作物
+
+fluid.

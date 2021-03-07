@@ -20,7 +20,7 @@ import java.util.Random;
  * @author SUNMILKSONG
  */
 @ParametersAreNonnullByDefault
-public class BlockOre extends BlockSk {
+public class BlockOre extends BlockBase {
 
     public BlockOre(String name, String toolClass, int level, float hardness, Material material, SoundType soundType) {
         super(name, material, soundType);

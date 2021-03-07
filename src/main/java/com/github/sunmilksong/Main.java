@@ -1,7 +1,9 @@
 package com.github.sunmilksong;
 
+import com.github.sunmilksong.init.ModFluids;
 import com.github.sunmilksong.proxy.CommonProxy;
 import com.github.sunmilksong.util.Reference;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -21,10 +23,15 @@ public class Main {
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
     public static CommonProxy proxy;
 
+    //启用万用桶
+    static {
+        FluidRegistry.enableUniversalBucket();
+    }
 
     @Mod.EventHandler
     public static void preInit(FMLPreInitializationEvent event) {
-
+        ModFluids.registerFluids();
+        ModFluids.registerModelFluid();
     }
 
     @Mod.EventHandler

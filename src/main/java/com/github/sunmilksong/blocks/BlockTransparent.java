@@ -15,12 +15,10 @@ import javax.annotation.ParametersAreNonnullByDefault;
  * @author SUNMILKSONG
  */
 @ParametersAreNonnullByDefault
-public class BlockTransparent extends BlockSk {
+public class BlockTransparent extends BlockBase {
 
     public BlockTransparent(String name, Material material, SoundType soundType) {
         super(name, material, soundType);
-
-        this.setSoundType(SoundType.GLASS);
 
         ModBlocks.BLOCKS.add(this);
     }

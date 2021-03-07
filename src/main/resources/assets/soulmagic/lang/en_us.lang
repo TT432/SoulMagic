@@ -10,6 +10,8 @@ tile.soulmagic.solid_state_soul.name=Soul Block
 
 tile.soulmagic.soul_ore.name=Soul Ore
 
+tile.soulmagic.soul_sand.name=Soul Farmland
+
 #crop
 
 tile.soulmagic.soul.crop.name=Soul Crop

@@ -1,7 +1,7 @@
 package com.github.sunmilksong.init;
 
-import com.github.sunmilksong.items.ItemSd;
-import com.github.sunmilksong.items.ItemSk;
+import com.github.sunmilksong.items.ItemSeed;
+import com.github.sunmilksong.items.ItemBase;
 import com.github.sunmilksong.tools.ToolCom;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -29,9 +29,9 @@ public class ModItems extends ToolCom {
     public static final List<Item> ITEMS = new ArrayList<>();
     //普通物品
 
-    public static final ItemSk SOUL = new ItemSk("soul");
+    public static final ItemBase SOUL = new ItemBase("soul");
 
-    public static final ItemSd SOUL_SEED = new ItemSd("soul_seed", ModBlocks.SOUL_CROP, ModBlocks.SOUL_SAND);
+    public static final ItemSeed SOUL_SEED = new ItemSeed("soul_seed", ModBlocks.SOUL_CROP, ModBlocks.SOUL_SAND);
 
     //物品方块
 
@@ -43,8 +43,8 @@ public class ModItems extends ToolCom {
 
     @SubscribeEvent
     public static void onItemRegister(RegistryEvent.Register<Item> event) {
-
         IForgeRegistry<Item> register = event.getRegistry();
+
         //普通物品
         register.register(SOUL);
         register.register(SOUL_SEED);
