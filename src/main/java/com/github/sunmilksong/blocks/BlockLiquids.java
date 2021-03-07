@@ -1,14 +1,19 @@
 package com.github.sunmilksong.blocks;
 
 import net.minecraft.block.BlockLiquid;
-import net.minecraft.block.material.Material;
+import net.minecraft.util.ResourceLocation;
 
 /**
  * @author SUNMILKSONG
  */
-public class BlockLiquids extends BlockLiquid {
 
-    protected BlockLiquids(Material materialIn) {
-        super(materialIn);
+public class BlockLiquids extends Fluid{
+
+    protected BlockLiquids(String fluidName, ResourceLocation still, ResourceLocation flowing, int color) {
+        super(fluidName,still,flowing);
     }
+    
+    this.getColor(color);
+    this.
+    
 }
