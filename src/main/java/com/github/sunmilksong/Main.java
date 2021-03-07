@@ -30,8 +30,6 @@ public class Main {
 
     @Mod.EventHandler
     public static void preInit(FMLPreInitializationEvent event) {
-        ModFluids.registerFluids();
-        ModFluids.registerModelFluid();
     }
 
     @Mod.EventHandler

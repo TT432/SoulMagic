@@ -1,3 +1,7 @@
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
 buildscript {
     repositories {
         jcenter()
@@ -75,3 +79,5 @@ processResources {
         exclude 'mcmod.info'
     }
 }
+
+sourceSets { main { output.resourcesDir = output.classesDir } }

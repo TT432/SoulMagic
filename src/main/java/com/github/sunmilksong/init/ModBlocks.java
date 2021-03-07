@@ -9,6 +9,7 @@ import com.github.sunmilksong.fluids.BlockFluid;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
+import net.minecraft.block.material.Material;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -16,6 +17,9 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.github.sunmilksong.init.ModFluids.registerFluid;
+import static com.github.sunmilksong.init.ModFluids.registerFluids;
 
 /**
  * @author SUNMILKSONG
@@ -51,13 +55,6 @@ public class ModBlocks {
      * 流体块
      */
     public static final BlockFluid SPIRIT = new
-            BlockFluid("spirit_block", ModFluids.SPIRIT, Materials.SPIRIT, MapColor.SNOW);
-
-    @SubscribeEvent
-    public static void onBlockRegister(RegistryEvent.Register<Block> event) {
-            for (Block block : ModBlocks.BLOCKS) {
-                event.getRegistry().register(block);
-            }
-        }
-    }
+            BlockFluid("spirit_block", ModFluids.SPIRIT, Material.WATER, MapColor.SNOW);
+}
 

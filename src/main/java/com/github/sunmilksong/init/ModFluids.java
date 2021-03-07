@@ -29,7 +29,7 @@ public class ModFluids {
 
 
     public static final FluidBase SPIRIT = new
-            FluidBase("spirit_fluid", 1000, 1000, 0, 300, false, Materials.SPIRIT, 255255255);
+            FluidBase("spirit_fluid", 1000, 1000, 0, 300, false, Materials.SPIRIT, 255255255 | 0xFF000000);
 
     public static void registerFluids() {
         registerFluid(SPIRIT);
@@ -42,13 +42,7 @@ public class ModFluids {
 
 
     public static void registerModelFluid(){
-        ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.SPIRIT), new ItemMeshDefinition() {
-
-            @Override
-            public ModelResourceLocation getModelLocation(ItemStack stack) {
-                return new ModelResourceLocation("soulmagic:spirit_fluid", "fluid");
-            }
-        });
+        ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.SPIRIT), stack -> new ModelResourceLocation("soulmagic:spirit_fluid", "fluid"));
         ModelLoader.setCustomStateMapper(ModBlocks.SPIRIT, new StateMapperBase() {
             @Override
             protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
